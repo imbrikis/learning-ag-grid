@@ -3,7 +3,7 @@ import Table from './Table'
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       <Table />
     </div>
   )

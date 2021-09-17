@@ -12,3 +12,20 @@ html {
 body {
   box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.table-wrapper {
+  height: 40rem;
+  width: 60rem;
+}

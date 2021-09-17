@@ -15,9 +15,9 @@ const columnTypes = {
 
 const Table = () => {
   return (
-    <div>
-      <h1>AG Grid Table</h1>
-      <div className="ag-theme-alpine" style={{height: 400, width: 600}}>
+    <>
+      <header>AG Grid Table</header>
+      <div className="ag-theme-alpine table-wrapper">
         <AgGridReact rowData={tabledata} columnTypes={columnTypes} defaultColDef={defaultColDef}>
           <AgGridColumn headerName="NES Game" field="name" />
           <AgGridColumn headerName="Publisher" field="publisher" />
@@ -27,7 +27,7 @@ const Table = () => {
           </AgGridColumn>
         </AgGridReact>
       </div>
-    </div>
+    </>
   )
 }
 
