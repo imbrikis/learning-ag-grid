@@ -10,10 +10,10 @@ const defaultColDef = {sortable: true, flex: 1}
 const columnTypes = {
   main: {
     editable: true,
-    filter: true
+    filter: true,
   },
   isFilterable: {
-    filter: true
+    filter: true,
   }
 }
 
@@ -22,8 +22,8 @@ const Table = () => {
     <>
       <header>AG Grid Table</header>
       <div className="ag-theme-alpine table-wrapper">
-        <AgGridReact rowData={tabledata} columnTypes={columnTypes} defaultColDef={defaultColDef} rowSelection={'multiple'}>
-          <AgGridColumn headerName="NES Game" field="name" />
+        <AgGridReact rowData={tabledata} columnTypes={columnTypes} defaultColDef={defaultColDef} rowSelection={'multiple'} suppressMenuHide={true}>
+          <AgGridColumn headerName="NES Game" field="name" checkboxSelection="true" />
           <AgGridColumn headerName="Publisher" field="publisher" type="isFilterable" />
           <AgGridColumn headerName="Metadata">
             <AgGridColumn field="year" type="main" />
