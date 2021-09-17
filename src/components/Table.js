@@ -9,7 +9,11 @@ import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 const defaultColDef = {sortable: true, flex: 1}
 const columnTypes = {
   main: {
-    editable: true
+    editable: true,
+    filter: true
+  },
+  isFilterable: {
+    filter: true
   }
 }
 
@@ -18,9 +22,9 @@ const Table = () => {
     <>
       <header>AG Grid Table</header>
       <div className="ag-theme-alpine table-wrapper">
-        <AgGridReact rowData={tabledata} columnTypes={columnTypes} defaultColDef={defaultColDef}>
+        <AgGridReact rowData={tabledata} columnTypes={columnTypes} defaultColDef={defaultColDef} rowSelection={'multiple'}>
           <AgGridColumn headerName="NES Game" field="name" />
-          <AgGridColumn headerName="Publisher" field="publisher" />
+          <AgGridColumn headerName="Publisher" field="publisher" type="isFilterable" />
           <AgGridColumn headerName="Metadata">
             <AgGridColumn field="year" type="main" />
             <AgGridColumn field="developer" type="main" />
