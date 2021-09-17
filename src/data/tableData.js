@@ -1,6 +1,6 @@
 export const tabledata = [
-  {name: 'Gradius', id: 123, location: 'zero one'},
-  {name: 'Little Samson', id: 98, location: 'Europe'},
-  {name: 'Gauntlet', id: 1, location: 'Nevada'},
-  {name: "Kirby's Adventure", id: 999, location: 'Somewhere close'},
+  {name: 'Little Samson', publisher: "Taito", year: 1992, developer: 'Takeru'},
+  {name: 'Gradius', publisher: "Konami", year: 1986, developer: 'Konami'},
+  {name: 'Gauntlet', publisher: "Tengen", year: 1989, developer: '-'},
+  {name: "Kirby's Adventure", publisher: "Nintendo", year: 1993, developer: 'HAL Laboratory'},
 ] 

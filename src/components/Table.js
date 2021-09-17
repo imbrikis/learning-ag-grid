@@ -19,9 +19,12 @@ const Table = () => {
       <h1>AG Grid Table</h1>
       <div className="ag-theme-alpine" style={{height: 400, width: 600}}>
         <AgGridReact rowData={tabledata} columnTypes={columnTypes} defaultColDef={defaultColDef}>
-          <AgGridColumn field="name" />
-          <AgGridColumn field="id" type="main" />
-          <AgGridColumn field="location" type="main" />
+          <AgGridColumn headerName="NES Game" field="name" />
+          <AgGridColumn headerName="Publisher" field="publisher" />
+          <AgGridColumn headerName="Metadata">
+            <AgGridColumn field="year" type="main" />
+            <AgGridColumn field="developer" type="main" />
+          </AgGridColumn>
         </AgGridReact>
       </div>
     </div>
